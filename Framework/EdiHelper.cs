@@ -124,6 +124,7 @@ namespace EdiFabric.Framework
                     StringSplitOptions.RemoveEmptyEntries);
 
             result = (from r in result select r.Trim()).ToArray();
+            NLog.LogManager.GetCurrentClassLogger().Debug("GetEdiSegments : results: {0}:\r\n", result.Length);
             return result;
 
         }
